@@ -150,6 +150,7 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(202, 26);
             this.maskedTextBox1.TabIndex = 13;
+            this.maskedTextBox1.PasswordChar = '*';
             // 
             // richTextBox1
             // 
