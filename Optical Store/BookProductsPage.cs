@@ -51,6 +51,7 @@ namespace Optical_Store
 
             var name = Products.Select(x => x.ProductName).ToList();
             this.comboBox1.DataSource = name;
+            //this.dataGridView1.DataSource = Bookings;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace Optical_Store
             var command = String.Format("Insert INTO [Booking] ([Status], [Patient_Id], [Products], [Amount], [Booking_Date]) VALUES ('{0}', {1}, '{2}', {3}, '{4}')", "Booked", Utility.Utility.Patient.Id, product.ProductName, booking.Amount, DateTime.Now.ToString());
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
+            this.InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -75,10 +77,13 @@ namespace Optical_Store
             var products = JsonConvert.SerializeObject(Bookings);
             var quantity = Bookings.Count();
             var total = Bookings.Sum(x => x.Amount);
+            Utility.Utility.Bookings.AddRange(Bookings);
             var command = String.Format("Insert INTO [Purchase] ([Products], [Patient_Id], [Quantity], [Amount], [Purchase_Date]) VALUES ('{0}', {1}, {2}, {3}, '{4}')", products, Utility.Utility.Patient.Id, quantity, total, DateTime.Now.ToString());
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
             MessageBox.Show("Items Purchased !!!");
+            PaymentPage paymentPage = new PaymentPage();
+            paymentPage.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,8 +93,6 @@ namespace Optical_Store
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.DataSource = Bookings;
-            this.dataGridView1.Refresh();
         }
     }
 }

@@ -34,5 +34,11 @@ namespace Optical_Store
             BookProductsPage bookProductsPage = new BookProductsPage(); ;
             bookProductsPage.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GetPrescriptionPage prescriptionPage = new GetPrescriptionPage();
+            prescriptionPage.Show();
+        }
     }
 }

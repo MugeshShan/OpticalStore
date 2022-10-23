@@ -1,6 +1,6 @@
 ﻿namespace Optical_Store
 {
-    partial class BookProductsPage
+    partial class PaymentPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,98 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 62);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(559, 161);
+            this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15F);
-            this.label1.Location = new System.Drawing.Point(96, 43);
+            this.label1.Location = new System.Drawing.Point(47, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Book Products";
+            this.label1.Size = new System.Drawing.Size(132, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Payment";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10F);
-            this.label2.Location = new System.Drawing.Point(96, 140);
+            this.label2.Location = new System.Drawing.Point(43, 299);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Product Name";
+            this.label2.Size = new System.Drawing.Size(76, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Amount";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10F);
-            this.label3.Location = new System.Drawing.Point(96, 213);
+            this.label3.Location = new System.Drawing.Point(43, 388);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Quantity";
+            this.label3.Size = new System.Drawing.Size(53, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Type";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10F);
-            this.button1.Location = new System.Drawing.Point(264, 294);
+            this.button1.Font = new System.Drawing.Font("Arial", 13F);
+            this.button1.Location = new System.Drawing.Point(186, 481);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 37);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add";
+            this.button1.Size = new System.Drawing.Size(147, 56);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Pay";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9F);
-            this.textBox1.Location = new System.Drawing.Point(264, 213);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 28);
-            this.textBox1.TabIndex = 7;
-            // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9F);
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(264, 140);
+            this.comboBox1.Location = new System.Drawing.Point(186, 388);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 29);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox1.Size = new System.Drawing.Size(121, 31);
+            this.comboBox1.TabIndex = 5;
             // 
-            // button2
+            // label4
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 15F);
-            this.button2.Location = new System.Drawing.Point(264, 426);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 49);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Checkout";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 13F);
+            this.label4.Location = new System.Drawing.Point(186, 298);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 31);
+            this.label4.TabIndex = 6;
             // 
-            // BookProductsPage
+            // PaymentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 727);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(802, 633);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "BookProductsPage";
-            this.Text = "BookProductsPage";
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "PaymentPage";
+            this.Text = "PaymentPage";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,12 +129,12 @@
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
     }
 }
