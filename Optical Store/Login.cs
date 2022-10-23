@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Optical_Store
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -20,18 +20,6 @@ namespace Optical_Store
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Signup signup = new Signup();
-            signup.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
         }
     }
 }
