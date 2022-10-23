@@ -82,6 +82,7 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(160, 26);
             this.maskedTextBox1.TabIndex = 5;
+            this.maskedTextBox1.PasswordChar = '*';
             // 
             // button1
             // 
@@ -92,30 +93,31 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Arial", 9F);
             this.radioButton1.Location = new System.Drawing.Point(342, 303);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 24);
+            this.radioButton1.Size = new System.Drawing.Size(88, 25);
             this.radioButton1.TabIndex = 7;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Doctor";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 9F);
             this.radioButton2.Location = new System.Drawing.Point(505, 303);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(126, 24);
+            this.radioButton2.Size = new System.Drawing.Size(91, 25);
             this.radioButton2.TabIndex = 8;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Patient";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9);
             // 
             // Login
             // 
