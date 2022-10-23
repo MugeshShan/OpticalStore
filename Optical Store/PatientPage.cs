@@ -28,5 +28,11 @@ namespace Optical_Store
             AppointmentStatusPage appointmentStatusPage =   new AppointmentStatusPage(); ;
             appointmentStatusPage.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BookProductsPage bookProductsPage = new BookProductsPage(); ;
+            bookProductsPage.Show();
+        }
     }
 }
