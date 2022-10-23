@@ -16,5 +16,17 @@ namespace Optical_Store
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AppointmentPage appointmentPage = new AppointmentPage();
+            appointmentPage.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AppointmentStatusPage appointmentStatusPage =   new AppointmentStatusPage(); ;
+            appointmentStatusPage.Show();
+        }
     }
 }
