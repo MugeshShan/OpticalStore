@@ -39,7 +39,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(49, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(971, 341);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1115, 634);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AppointmentStatusPage";

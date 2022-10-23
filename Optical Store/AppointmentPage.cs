@@ -81,7 +81,7 @@ namespace Optical_Store
         private void button1_Click(object sender, EventArgs e)
         {
             var doctor = Doctors.Find(x=>x.Name == this.comboBox1.SelectedItem.ToString());
-            var appointment_date = this.comboBox2.SelectedItem.ToString() + ':' + this.comboBox3.SelectedItem.ToString() + ':' + this.comboBox4.SelectedItem.ToString();
+            var appointment_date = this.dateTimePicker1.Text + ':' + this.comboBox2.SelectedItem.ToString() + ':' + this.comboBox3.SelectedItem.ToString() + ':' + this.comboBox4.SelectedItem.ToString();
             var command = String.Format("Insert INTO [Appointment] ([Type], [Status], [Patient_Id], [Doctor_Id], [Appointment_Date]) VALUES ('{0}', '{1}', {2}, {3}, '{4}')", "Online", "Booked", Utility.Utility.Patient.Id, doctor.Id, appointment_date);
 
             OleDbCommand command2 = new OleDbCommand(command, connection);
