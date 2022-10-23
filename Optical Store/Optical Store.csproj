@@ -68,6 +68,24 @@
     <Compile Include="BookProductsPage.Designer.cs">
       <DependentUpon>BookProductsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckAppoinmentsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckAppoinmentsPage.Designer.cs">
+      <DependentUpon>CheckAppoinmentsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmAppoinments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmAppoinments.Designer.cs">
+      <DependentUpon>ConfirmAppoinments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorPage.Designer.cs">
+      <DependentUpon>DoctorPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookProductsPage.resx">
       <DependentUpon>BookProductsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckAppoinmentsPage.resx">
+      <DependentUpon>CheckAppoinmentsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmAppoinments.resx">
+      <DependentUpon>ConfirmAppoinments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorPage.resx">
+      <DependentUpon>DoctorPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

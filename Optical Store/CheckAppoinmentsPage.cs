@@ -13,19 +13,28 @@ using System.Windows.Forms;
 
 namespace Optical_Store
 {
-    public partial class AppointmentStatusPage : Form
+    public partial class CheckAppoinmentsPage : Form
     {
         OleDbConnection connection;
-        List<Doctor> Doctors = new List<Doctor>();
+        List<Patient> Patients = new List<Patient>();
         List<Appointment> Appointments = new List<Appointment>();
-        public AppointmentStatusPage()
+        public CheckAppoinmentsPage()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             connection = new OleDbConnection();
             connection.ConnectionString = ConfigurationManager.AppSettings["OpticalStore"];
             connection.Open();
 
-            var command = "Select * from Doctor";
+            var command = "Select * from Patient";
             OleDbCommand command2 = new OleDbCommand(command, connection);
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             adapter.SelectCommand = command2;
@@ -35,10 +44,10 @@ namespace Optical_Store
             foreach (DataRow dr in dt.Rows)
             {
 
-                var tempUser = new Doctor
+                var tempUser = new Patient
                 {
-                    Id = Convert.ToInt32(dr["Id"]),
-                    Name = dr["DoctorName"].ToString(),
+                    Id = Convert.ToInt32(dr["Patient_Id"]),
+                    Name = dr["Patient_Name"].ToString(),
                     Email = dr["Email"].ToString(),
                     UserName = dr["UserName"].ToString(),
                     Password = dr["Password"].ToString(),
@@ -47,7 +56,7 @@ namespace Optical_Store
                 };
                 if (tempUser != null)
                 {
-                    Doctors.Add(tempUser);
+                    Patients.Add(tempUser);
                 }
 
             }
@@ -61,20 +70,22 @@ namespace Optical_Store
             var dt1 = ds1.Tables[0];
             foreach (DataRow dr in dt1.Rows)
             {
-                var patientId = Convert.ToInt32(dr["Patient_Id"]);
-                if (patientId == Utility.Utility.Patient.Id)
+                var doctorId = Convert.ToInt32(dr["Doctor_Id"]);
+                if (doctorId == Utility.Utility.Doctor.Id)
                 {
-                    var doctorId = Convert.ToInt32(dr["Doctor_Id"]);
-                    var doctor = Doctors.Find(x => x.Id == doctorId);
-                    var remarks = dr["Status"].ToString() == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
+                    var patientId = Convert.ToInt32(dr["Patient_Id"]);
+                    var patient = Patients.Find(x => x.Id == patientId);
+                    var remarks = dr["Remarks"].ToString();// == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
                     var tempUser = new Appointment
                     {
-                        Name = doctor.Name,
+                        Id = Convert.ToInt32(dr["ID"]),
+                        PatientId = patientId,
+                        Name = patient.Name,
                         Time = dr["Appointment_Date"].ToString(),
                         Status = dr["Status"].ToString(),
                         Remarks = remarks
                     };
-                    if (tempUser != null)
+                    if (tempUser != null && tempUser.Time.Contains(this.dateTimePicker1.Text))
                     {
                         Appointments.Add(tempUser);
                     }

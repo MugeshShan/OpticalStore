@@ -14,5 +14,7 @@ namespace Optical_Store.Utility
         public static Patient Patient= new Patient();
 
         public static List<Booking> Bookings = new List<Booking>();
+
+        public static Appointment Appointment = new Appointment();
     }
 }

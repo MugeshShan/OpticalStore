@@ -115,6 +115,8 @@ namespace Optical_Store
                     ClearTextBoxes();
                     MessageBox.Show("Welcome Doctor " + doctor.Name + " !!!");
                     Utility.Utility.Doctor = doctor;
+                    DoctorPage doctorPage = new DoctorPage();
+                    doctorPage.Show();
                 }
                 else
                 {
