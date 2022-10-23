@@ -13,23 +13,17 @@ using System.Windows.Forms;
 
 namespace Optical_Store
 {
-    public partial class CheckAppoinmentsPage : Form
+    public partial class ProvidePrescriptions : Form
     {
         OleDbConnection connection;
         List<Patient> Patients = new List<Patient>();
         List<Appointment> Appointments = new List<Appointment>();
-        public CheckAppoinmentsPage()
+        List<Patient> BookedPatients = new List<Patient>();
+        List<Appointment> AppointmentOnMentionedDate = new List<Appointment>();
+        Appointment Appointment = new Appointment();
+        public ProvidePrescriptions()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             connection = new OleDbConnection();
             connection.ConnectionString = ConfigurationManager.AppSettings["OpticalStore"];
             connection.Open();
@@ -75,32 +69,58 @@ namespace Optical_Store
                 {
                     var patientId = Convert.ToInt32(dr["Patient_Id"]);
                     var patient = Patients.Find(x => x.Id == patientId);
-                    var remarks = dr["Remarks"].ToString();// == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
+                    var remarks = dr["Status"].ToString() == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
                     var tempUser = new Appointment
                     {
                         Id = Convert.ToInt32(dr["ID"]),
-                        PatientId = patientId,
                         Name = patient.Name,
                         Time = dr["Appointment_Date"].ToString(),
                         Status = dr["Status"].ToString(),
-                        Remarks = remarks
+                        Remarks = remarks,
+                        PatientId = patientId
                     };
-                    if (tempUser != null && tempUser.Time.Contains(this.dateTimePicker1.Text))
+                    if (tempUser != null)
                     {
                         Appointments.Add(tempUser);
                     }
                 }
 
             }
+        }
 
-            this.dataGridView1.DataSource = Appointments;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var command = String.Format("Insert INTO [Prescription] ([Prescription], [Patient_Id], [Doctor_Id], [Prescription_Date]) VALUES ('{0}', {1}, {2}, '{3}')", this.richTextBox1.Text, Appointment.PatientId, Utility.Utility.Doctor.Id, DateTime.Now.ToString());
+            OleDbCommand command2 = new OleDbCommand(command, connection);
+            command2.ExecuteNonQuery();
+            MessageBox.Show("Prescription Added Successfully!!!");
+            this.Close();
+            DoctorPage doctorPage = new DoctorPage();
+            doctorPage.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var date = this.dateTimePicker1.Text;
+
+            var appoinment = Appointments.FindAll(x => x.Time.Contains(date));
+            foreach (var app in appoinment)
+            {
+                var patient = Patients.Find(x => x.Id == app.PatientId);
+                if (patient != null)
+                {
+                    BookedPatients.Add(patient);
+                    AppointmentOnMentionedDate.Add(app);
+                }
+            }
+            this.comboBox1.DataSource = BookedPatients.Select(x => x.Name).ToList();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            DoctorPage doctorPage = new DoctorPage();
-            doctorPage.Show();
+            var patient = BookedPatients.Find(x => x.Name == this.comboBox1.Text);
+            var appointment = AppointmentOnMentionedDate.Find(x => x.PatientId == patient.Id);
+            Appointment = appointment;
         }
     }
 }

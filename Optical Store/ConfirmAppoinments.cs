@@ -119,6 +119,10 @@ namespace Optical_Store
             cmd.CommandText = command;
             cmd.Parameters.AddWithValue("@Id", appointment.Id);
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Appointment updated successfully !!!");
+            this.Close();
+            DoctorPage doctorPage = new DoctorPage();
+            doctorPage.Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
