@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppointmentPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AppointmentPage.Designer.cs">
       <DependentUpon>AppointmentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.Designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
     </Compile>
     <Compile Include="AppointmentStatusPage.cs">
       <SubType>Form</SubType>
@@ -122,6 +134,18 @@
     <Compile Include="PaymentPage.Designer.cs">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvidePrescriptions.cs">
@@ -130,6 +154,12 @@
     <Compile Include="ProvidePrescriptions.Designer.cs">
       <DependentUpon>ProvidePrescriptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,8 +167,14 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppointmentPage.resx">
       <DependentUpon>AppointmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppointmentStatusPage.resx">
       <DependentUpon>AppointmentStatusPage.cs</DependentUpon>
@@ -170,6 +206,12 @@
     <EmbeddedResource Include="PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -181,6 +223,9 @@
     </Compile>
     <EmbeddedResource Include="ProvidePrescriptions.resx">
       <DependentUpon>ProvidePrescriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
