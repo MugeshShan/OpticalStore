@@ -84,5 +84,13 @@ namespace Optical_Store
 
             this.dataGridView1.DataSource = Appointments;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            PatientPage patientPage = new PatientPage();
+            patientPage.Show();
+            this.Close();
+        }
     }
 }

@@ -94,9 +94,10 @@ namespace Optical_Store
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
             MessageBox.Show("Prescription Added Successfully!!!");
-            this.Close();
+
             DoctorPage doctorPage = new DoctorPage();
             doctorPage.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

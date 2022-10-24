@@ -87,7 +87,7 @@ namespace Optical_Store
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
             MessageBox.Show("Appoinment Booked!!! Please check appointment status one day before in Appointment Status page !!!");
-
+            this.Close();
         }
     }
 }

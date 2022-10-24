@@ -78,5 +78,13 @@ namespace Optical_Store
             var prescription = Prescriptions.FindAll(x=>x.Date ==  this.dateTimePicker1.Text);
             this.dataGridView1.DataSource = prescription;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            PatientPage patient = new PatientPage();
+            patient.Show();
+            this.Close();
+        }
     }
 }

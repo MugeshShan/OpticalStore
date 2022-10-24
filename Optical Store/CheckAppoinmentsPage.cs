@@ -98,9 +98,10 @@ namespace Optical_Store
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
             DoctorPage doctorPage = new DoctorPage();
             doctorPage.Show();
+            this.Close();
         }
     }
 }

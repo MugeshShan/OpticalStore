@@ -84,6 +84,7 @@ namespace Optical_Store
             MessageBox.Show("Items Purchased !!!");
             PaymentPage paymentPage = new PaymentPage();
             paymentPage.Show();
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

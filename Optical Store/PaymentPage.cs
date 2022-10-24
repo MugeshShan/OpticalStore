@@ -39,6 +39,10 @@ namespace Optical_Store
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
             MessageBox.Show("Payment Received !!!");
+
+            PatientPage patient = new PatientPage();
+            patient.Show();
+            this.Close();
         }
     }
 }

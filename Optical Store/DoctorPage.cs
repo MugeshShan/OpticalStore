@@ -19,30 +19,34 @@ namespace Optical_Store
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+
             CheckAppoinmentsPage checkAppoinmentsPage = new CheckAppoinmentsPage();
             checkAppoinmentsPage.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
             ConfirmAppoinments confirmAppoinments = new ConfirmAppoinments();
             confirmAppoinments.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+
             ProvidePrescriptions providePrescriptions = new ProvidePrescriptions();
             providePrescriptions.Show();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+
             Form1 doctorPage = new Form1();
             doctorPage.Show();
+            this.Close();
         }
     }
 }

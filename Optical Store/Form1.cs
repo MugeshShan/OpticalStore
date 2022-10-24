@@ -24,16 +24,16 @@ namespace Optical_Store
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
             Signup signup = new Signup();
             signup.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
             Login login = new Login();
             login.Show();
+            //this.Close();
         }
     }
 }

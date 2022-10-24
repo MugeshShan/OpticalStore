@@ -21,24 +21,30 @@ namespace Optical_Store
         {
             AppointmentPage appointmentPage = new AppointmentPage();
             appointmentPage.Show();
+            this.Close();
+            //PatientPage patientPage = new PatientPage();
+            //patientPage.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AppointmentStatusPage appointmentStatusPage =   new AppointmentStatusPage(); ;
             appointmentStatusPage.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             BookProductsPage bookProductsPage = new BookProductsPage(); ;
             bookProductsPage.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             GetPrescriptionPage prescriptionPage = new GetPrescriptionPage();
             prescriptionPage.Show();
+            this.Close();
         }
     }
 }
