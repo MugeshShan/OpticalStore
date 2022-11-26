@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.label1.Location = new System.Drawing.Point(47, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 35);
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label2.Location = new System.Drawing.Point(43, 299);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label3.Location = new System.Drawing.Point(43, 388);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 23);
@@ -80,7 +80,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 13F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.button1.Location = new System.Drawing.Point(186, 481);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 56);
@@ -91,7 +91,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 10F);
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(186, 388);
             this.comboBox1.Name = "comboBox1";
@@ -101,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 13F);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.label4.Location = new System.Drawing.Point(186, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 31);

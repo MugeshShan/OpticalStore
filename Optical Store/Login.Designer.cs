@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.label1.Location = new System.Drawing.Point(272, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 45);
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label2.Location = new System.Drawing.Point(183, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 23);
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label3.Location = new System.Drawing.Point(183, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 23);
@@ -86,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.button1.Location = new System.Drawing.Point(342, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 36);
@@ -98,7 +98,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9F);
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.radioButton1.Location = new System.Drawing.Point(342, 303);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 25);
@@ -110,7 +110,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9F);
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.radioButton2.Location = new System.Drawing.Point(505, 303);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(91, 25);

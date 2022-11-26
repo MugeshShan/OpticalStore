@@ -26,7 +26,7 @@ namespace Optical_Store
         {
             Signup signup = new Signup();
             signup.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

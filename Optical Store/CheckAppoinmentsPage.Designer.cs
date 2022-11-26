@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.label1.Location = new System.Drawing.Point(122, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 21);
@@ -60,7 +60,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(255, 61);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -69,7 +69,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button1.Location = new System.Drawing.Point(537, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 37);
@@ -87,7 +87,7 @@
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.Font = new System.Drawing.Font("Arial", 9F);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9F);
             // 
             // CheckAppoinmentsPage
             // 

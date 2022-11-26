@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label1.Location = new System.Drawing.Point(166, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 23);
@@ -51,7 +51,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.dateTimePicker1.Location = new System.Drawing.Point(338, 85);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(305, 28);
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label2.Location = new System.Drawing.Point(166, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 23);
@@ -80,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.label3.Location = new System.Drawing.Point(166, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 23);
@@ -89,7 +89,7 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 9F);
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(338, 182);
             this.comboBox2.Name = "comboBox2";
@@ -98,7 +98,7 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 9F);
+            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(447, 182);
             this.comboBox3.Name = "comboBox3";
@@ -107,7 +107,7 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 9F);
+            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(554, 182);
             this.comboBox4.Name = "comboBox4";
@@ -116,7 +116,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button1.Location = new System.Drawing.Point(338, 356);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 53);

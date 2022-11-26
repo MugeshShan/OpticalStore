@@ -39,7 +39,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(222, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.label1.Location = new System.Drawing.Point(85, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 21);
@@ -58,7 +58,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button1.Location = new System.Drawing.Point(555, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 42);
@@ -79,7 +79,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 9F);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.button2.Location = new System.Drawing.Point(89, 437);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 42);

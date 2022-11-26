@@ -36,7 +36,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F);
             this.label1.Location = new System.Drawing.Point(184, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(470, 45);
@@ -46,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 10F);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.button1.Location = new System.Drawing.Point(318, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 52);
@@ -57,7 +57,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 10F);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.button2.Location = new System.Drawing.Point(318, 278);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 48);
