@@ -40,7 +40,8 @@ namespace Optical_Store
                 {
                     Id = Convert.ToInt32(dr["Id"]),
                     ProductName = dr["Product_Name"].ToString(),
-                    Amount = Convert.ToInt32(dr["Amount"])
+                    Amount = Convert.ToInt32(dr["Amount"]),
+                    Description = dr["Description"].ToString()
                 };
                 if (tempUser != null)
                 {
@@ -62,14 +63,14 @@ namespace Optical_Store
                 ProductId = product.Id,
                 ProductName = this.comboBox1.Text,
                 Quantity = Convert.ToInt32(this.textBox1.Text),
-                Amount = product.Amount * Convert.ToInt32(this.textBox1.Text)
+                Amount = product.Amount * Convert.ToInt32(this.textBox1.Text),
             };
             var book = JsonConvert.SerializeObject(booking);
             Bookings.Add(booking);
             var command = String.Format("Insert INTO [Booking] ([Status], [Patient_Id], [Products], [Amount], [Booking_Date]) VALUES ('{0}', {1}, '{2}', {3}, '{4}')", "Booked", Utility.Utility.Patient.Id, product.ProductName, booking.Amount, DateTime.Now.ToString());
             OleDbCommand command2 = new OleDbCommand(command, connection);
             command2.ExecuteNonQuery();
-            this.InitializeComponent();
+            //this.InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,9 +79,13 @@ namespace Optical_Store
             var quantity = Bookings.Count();
             var total = Bookings.Sum(x => x.Amount);
             Utility.Utility.Bookings.AddRange(Bookings);
-            var command = String.Format("Insert INTO [Purchase] ([Products], [Patient_Id], [Quantity], [Amount], [Purchase_Date]) VALUES ('{0}', {1}, {2}, {3}, '{4}')", products, Utility.Utility.Patient.Id, quantity, total, DateTime.Now.ToString());
-            OleDbCommand command2 = new OleDbCommand(command, connection);
-            command2.ExecuteNonQuery();
+            var date = DateTime.Now.ToString();
+            foreach (var booking in Bookings)
+            {
+                var command = String.Format("Insert INTO [Purchase] ([Products], [Patient_Id], [Quantity], [Amount], [Purchase_Date]) VALUES ('{0}', {1}, {2}, {3}, '{4}')", booking.ProductName, Utility.Utility.Patient.Id, booking.Quantity, total, date);
+                OleDbCommand command2 = new OleDbCommand(command, connection);
+                command2.ExecuteNonQuery();
+            }
             MessageBox.Show("Items Purchased !!!");
             PaymentPage paymentPage = new PaymentPage();
             paymentPage.Show();

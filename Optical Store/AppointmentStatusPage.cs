@@ -66,13 +66,15 @@ namespace Optical_Store
                 {
                     var doctorId = Convert.ToInt32(dr["Doctor_Id"]);
                     var doctor = Doctors.Find(x => x.Id == doctorId);
-                    var remarks = dr["Status"].ToString() == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
+                    var remarks = dr["Status"].ToString();// == "Booked" ? "Awaiting for Doctors Approval" : "Booking Confirmed. Please reach opticals before 30mins of appointment time";
                     var tempUser = new Appointment
                     {
+                        Id = Convert.ToInt32(dr["ID"]),
                         Name = doctor.Name,
                         Time = dr["Appointment_Date"].ToString(),
                         Status = dr["Status"].ToString(),
-                        Remarks = remarks
+                        Remarks = remarks,
+                        PatientId = Convert.ToInt32(dr["Patient_Id"])
                     };
                     if (tempUser != null)
                     {
