@@ -36,12 +36,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F);
-            this.label1.Location = new System.Drawing.Point(184, 77);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 17F);
+            this.label1.Location = new System.Drawing.Point(12, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 45);
+            this.label1.Size = new System.Drawing.Size(778, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Optical Store";
+            this.label1.Text = "Welcome to V-Optics Co Database Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
